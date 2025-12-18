@@ -17,7 +17,6 @@
 ## 🔧 Tech Stack
 
 * **OS:** EndeavourOS (Arch-based)
-* **Languages:** Lua (Luau), JavaScript, HTML, CSS
 * **Tools:** Git, VS Code, rojo
 * **Platforms:** Roblox, Web, Airship
 * **Languages:** Lua (Luau), JavaScript, HTML, CSS, Python, Typescript
