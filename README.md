@@ -35,7 +35,7 @@
 
 ![GitHub Stats](https://github-readme-stats-psi-tawny-28.vercel.app/api?username=andreasthuis\&show_icons=true\&theme=dark)
 
-![Top Languages](https://github-readme-stats-psi-tawny-28.vercel.app/api/top-langs/?username=andreasthuis\&layout=compact\&theme=dark)
+![Top Languages](https://github-readme-stats-psi-tawny-28.vercel.app/api/top-langs/?username=andreasthuis\&layout=compact\&theme=dark\&lang_count=20)
 
 ## 📫 Contact
 
