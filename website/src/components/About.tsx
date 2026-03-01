@@ -51,7 +51,7 @@ export default function About() {
             building things that people can genuinely benefit from</strong>.
         </p>
 
-        <a href="/home">Return to the main page</a>
+        <a href="/">Return to the main page</a>
       </div>
     </section>
   );
