@@ -1,0 +1,12 @@
+[
+  {
+    "id": "home",
+    "name": "Home",
+    "sections": ["hero", "projects", "contact"]
+  },
+  {
+    "id": "about",
+    "name": "About",
+    "sections": ["about"]
+  }
+]

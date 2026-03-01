@@ -1,0 +1,141 @@
+.about {
+  padding: 6rem 2rem;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 15, 15, 0.6) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 120%;
+  height: 100%;
+  background:
+    radial-gradient(
+      circle at 20% 50%,
+      rgba(100, 108, 255, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(0, 212, 255, 0.05) 0%,
+      transparent 50%
+    );
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.about h2 {
+  background-clip: unset;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, #646cff 0%, #00d4ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-shadow: 0 0 20px rgba(100, 108, 255, 0.15);
+}
+
+.about h3 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: #00d4ff;
+}
+
+.about p,
+.about ul {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+}
+
+.about strong {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.about ul {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+.about ul li {
+  margin-bottom: 0.75rem;
+  font-style: italic;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.about ul li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #00d4ff;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.about p.placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+a {
+  display: inline-block;
+  color: #646cff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1rem 1.5rem;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: rgba(100, 108, 255, 0.05);
+  margin-top: 40px;
+}
+
+a:hover {
+  color: #00d4ff;
+  background: rgba(100, 108, 255, 0.15);
+  border-color: #00d4ff;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(100, 108, 255, 0.25);
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 4rem 1.5rem;
+  }
+
+  .about p,
+  .about ul {
+    font-size: 1rem;
+  }
+}

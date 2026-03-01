@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Smartschool_Edit",
+    "description": "One of my bigger projects, a Tampermonkey script that adds a lot of features to the Smartschool platform.",
+    "technologies": ["JavaScript", "Tampermonkey"],
+    "link": "https://github.com/andreasthuis/Smartschool_edit",
+    "color": "#646cff"
+  },
+  {
+    "id": 2,
+    "title": "Andreasthuis' Minesweeper",
+    "description": "My current project, a 3D Minesweeper game built in roblox. The game is still in early development, but it already has unique features and a unique art style.",
+    "technologies": ["Rojo", "Roblox-React"],
+    "link": "https://www.roblox.com/games/137503544937241/Andreasthuis-Minesweeper",
+    "color": "#00d4ff"
+  },
+  {
+    "id": 3,
+    "title": "Discord Block Bypass [DISCONTINUED]",
+    "description": "A discord bot controlled by a website that allows you to bypass the block of the website in schools. The bot can be used to send messages to users in a specific server. This project is discontinued because it violates school rules and can get you in trouble.",
+    "technologies": ["Discord Bot", "cloudflare workers"],
+    "link": "https://github.com/andreasthuis/discord-widget/blob/main/index.html",
+    "color": "#ff006e"
+  }
+]
