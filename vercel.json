@@ -1,9 +1,4 @@
 {
-  "projects": [
-    {
-      "rootDirectory": "website"
-    }
-  ],
   "builds": [
     {
       "src": "website/package.json",
