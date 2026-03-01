@@ -1,17 +1,19 @@
-import { useRef, useEffect, useState } from 'react'
-import './App.css'
+import { useRef, useEffect, useState } from "react";
+import "./App.css";
 
-import { useScroll } from 'framer-motion'
-import Cubes from './components/Cubes.tsx'
-import Hero from './components/Hero.tsx'
-import Projects from './components/Projects.tsx'
-import Contact from './components/Contact.tsx'
-import About from './components/About.tsx'
+import { useScroll } from "framer-motion";
+import Cubes from "./components/Cubes.tsx";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import Hero from "./components/Hero.tsx";
+import Projects from "./components/Projects.tsx";
+import Contact from "./components/Contact.tsx";
+import About from "./components/About.tsx";
 
 interface PageConfig {
-  id: string
-  name: string
-  sections: string[]
+  id: string;
+  name: string;
+  sections: string[];
 }
 
 const sectionComponents: { [key: string]: React.ComponentType } = {
@@ -19,62 +21,72 @@ const sectionComponents: { [key: string]: React.ComponentType } = {
   projects: Projects,
   contact: Contact,
   about: About,
-}
+};
 
 function App() {
-  const sectionRef = useRef(null)
+  const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start start", "end end"]
-  })
+    offset: ["start start", "end end"],
+  });
 
-  const [pages, setPages] = useState<PageConfig[]>([])
-  const [currentPage, setCurrentPage] = useState('home')
-  const [loading, setLoading] = useState(true)
+  const [pages, setPages] = useState<PageConfig[]>([]);
+  const [currentPage, setCurrentPage] = useState("home");
+  const [loading, setLoading] = useState(true);
 
   // determine page from URL path
   const updatePageFromPath = () => {
-    const path = window.location.pathname.replace(/^\//, '')
-    setCurrentPage(path || 'home')
-  }
+    const path = window.location.pathname.replace(/^\//, "");
+    setCurrentPage(path || "home");
+  };
 
   useEffect(() => {
     const loadPages = async () => {
       try {
-        const response = await fetch('/data/pages.json')
-        const data = await response.json()
-        setPages(data)
+        const response = await fetch("/data/pages.json");
+        const data = await response.json();
+        setPages(data);
       } catch (error) {
-        console.error('Failed to load pages:', error)
+        console.error("Failed to load pages:", error);
       } finally {
-        setLoading(false)
+        setLoading(false);
       }
-    }
-    loadPages()
+    };
+    loadPages();
 
-    updatePageFromPath()
-    window.addEventListener('popstate', updatePageFromPath)
+    updatePageFromPath();
+    window.addEventListener("popstate", updatePageFromPath);
     return () => {
-      window.removeEventListener('popstate', updatePageFromPath)
-    }
-  }, [])
+      window.removeEventListener("popstate", updatePageFromPath);
+    };
+  }, []);
 
-  const currentPageConfig = pages.find(p => p.id === currentPage) || pages.find(p => p.id === 'home')
-  const sectionsToRender = currentPageConfig?.sections || []
+  const currentPageConfig =
+    pages.find((p) => p.id === currentPage) ||
+    pages.find((p) => p.id === "home");
+  const sectionsToRender = currentPageConfig?.sections || [];
 
   return (
     <>
+      <Analytics />
+      <SpeedInsights />
       <Cubes isLocked={false} scrollProgress={scrollYProgress} />
-      
+
       <div className="content" ref={sectionRef}>
         {loading ? (
-          <div style={{ textAlign: 'center', padding: '4rem', color: 'rgba(255,255,255,0.7)' }}>
+          <div
+            style={{
+              textAlign: "center",
+              padding: "4rem",
+              color: "rgba(255,255,255,0.7)",
+            }}
+          >
             Loading...
           </div>
         ) : (
           sectionsToRender.map((sectionId) => {
-            const Component = sectionComponents[sectionId]
-            return Component ? <Component key={sectionId} /> : null
+            const Component = sectionComponents[sectionId];
+            return Component ? <Component key={sectionId} /> : null;
           })
         )}
       </div>
@@ -83,7 +95,7 @@ function App() {
         <p>&copy; 2026 andreasthuis. All rights reserved.</p>
       </footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
