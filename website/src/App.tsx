@@ -3,8 +3,6 @@ import "./App.css";
 
 import { useScroll } from "framer-motion";
 import Cubes from "./components/Cubes.tsx";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next"
 import Hero from "./components/Hero.tsx";
 import Projects from "./components/Projects.tsx";
 import Contact from "./components/Contact.tsx";
@@ -68,8 +66,6 @@ function App() {
 
   return (
     <>
-      <Analytics />
-      <SpeedInsights />
       <Cubes isLocked={false} scrollProgress={scrollYProgress} />
 
       <div className="content" ref={sectionRef}>
