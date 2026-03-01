@@ -43,8 +43,7 @@ export default function About() {
         <h3>My Goals</h3>
         <p>
           I want to build <strong>things that actually matter to people</strong>
-          . Whether it's a
-          <strong>small tool that makes someone's day easier</strong> or a{" "}
+          . Whether it's a <strong>small tool that makes someone's day easier</strong> or a{" "}
           <strong>bigger project that solves a real problem</strong>, I like the
           idea of <strong>creating something useful</strong>. For me,{" "}
           <strong>programming isn't just about writing code</strong>, it's about <strong>
