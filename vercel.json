@@ -6,7 +6,11 @@
       "config": { "distDir": "website/dist" }
     }
   ],
+  "routes": [
+    { "src": "/about", "dest": "/website/dist/index.html" },
+    { "src": "/home", "dest": "/website/dist/index.html" }
+  ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/website/dist/index.html" }
   ]
 }
