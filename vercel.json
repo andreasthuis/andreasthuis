@@ -6,11 +6,7 @@
       "config": { "distDir": "website/dist" }
     }
   ],
-  "routes": [
-    { "handle": "filesystem" },
-    {
-      "src": "/.*",
-      "dest": "/website/dist/index.html"
-    }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/website/dist/index.html" }
   ]
 }
