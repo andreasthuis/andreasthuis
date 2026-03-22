@@ -7,6 +7,8 @@ import Hero from "./components/Hero.tsx";
 import Projects from "./components/Projects.tsx";
 import Contact from "./components/Contact.tsx";
 import About from "./components/About.tsx";
+import Sha from "./components/Sha.tsx";
+import Spinner from "./components/gamble.tsx"
 
 interface PageConfig {
   id: string;
@@ -19,6 +21,8 @@ const sectionComponents: { [key: string]: React.ComponentType } = {
   projects: Projects,
   contact: Contact,
   about: About,
+  sha: Sha,
+  gamble: Spinner
 };
 
 function App() {
@@ -32,7 +36,6 @@ function App() {
   const [currentPage, setCurrentPage] = useState("home");
   const [loading, setLoading] = useState(true);
 
-  // determine page from URL path
   const updatePageFromPath = () => {
     const path = window.location.pathname.replace(/^\//, "");
     setCurrentPage(path || "home");

@@ -8,5 +8,10 @@
     "id": "about",
     "name": "About",
     "sections": ["about"]
+  },
+  {
+    "id": "sha",
+    "name": "Sha",
+    "sections": ["sha", "gamble"]
   }
 ]
