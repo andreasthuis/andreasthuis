@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "title": "Smartschool_Edit",
-    "description": "One of my bigger projects, a Tampermonkey script that adds a lot of features to the Smartschool platform.",
-    "technologies": ["JavaScript", "Tampermonkey"],
-    "link": "https://github.com/andreasthuis/Smartschool_edit",
+    "title": "rebloxed",
+    "description": "Rebloxed is a high-performance, lightweight custom launcher for Roblox built with Tauri, React, and TypeScript.",
+    "technologies": ["tauri"],
+    "link": "https://github.com/andreasthuis/rebloxed",
     "color": "#646cff"
   },
   {
@@ -17,10 +17,10 @@
   },
   {
     "id": 3,
-    "title": "Discord Block Bypass [DISCONTINUED]",
-    "description": "A discord bot controlled by a website that allows you to bypass the block of the website in schools. The bot can be used to send messages to users in a specific server. This project is discontinued because it violates school rules and can get you in trouble.",
-    "technologies": ["Discord Bot", "cloudflare workers"],
-    "link": "https://github.com/andreasthuis/discord-widget/blob/main/index.html",
+    "title": "ro-rs",
+    "description": "A modern, asynchronous Rust library for the Roblox web API — a faithful port of [ro.py](https://github.com/ro-py/ro.py).",
+    "technologies": ["cargo"],
+    "link": "https://github.com/andreasthuis/ro-rs",
     "color": "#ff006e"
   }
 ]
