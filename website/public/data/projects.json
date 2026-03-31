@@ -18,7 +18,7 @@
   {
     "id": 3,
     "title": "ro-rs",
-    "description": "A modern, asynchronous Rust library for the Roblox web API — a faithful port of [ro.py](https://github.com/ro-py/ro.py).",
+    "description": "A modern, asynchronous Rust library for the Roblox web API, a faithful port of ro-py.",
     "technologies": ["cargo"],
     "link": "https://github.com/andreasthuis/ro-rs",
     "color": "#ff006e"
